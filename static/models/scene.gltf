@@ -1,0 +1,239 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 556,
+      "max": [
+        113.97145080566406,
+        102.41014862060547,
+        103.56824493408203
+      ],
+      "min": [
+        -113.97145080566406,
+        -102.41014862060547,
+        -103.56824493408203
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 6672,
+      "componentType": 5126,
+      "count": 556,
+      "max": [
+        0.9998992681503296,
+        0.9955126047134399,
+        0.9996027946472168
+      ],
+      "min": [
+        -0.9998968839645386,
+        -0.9991694092750549,
+        -0.9838718771934509
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 556,
+      "max": [
+        0.9913046360015869,
+        0.9913290739059448
+      ],
+      "min": [
+        0.008695390075445175,
+        0.008670926094055176
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1524,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "sdobnia (https://sketchfab.com/sdobnia)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pug-dog-ball-low-poly-7241e984cd7646339b7eb406eedcd5e3",
+      "title": "Pug dog Ball low poly"
+    },
+    "generator": "Sketchfab-14.32.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6096,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4448,
+      "byteOffset": 6096,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13344,
+      "byteOffset": 10544,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 23888,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Polygon_Reduction_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Polygon_Reduction",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Polygon_Reduction_1_Polygon Reduction_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -1.0,
+        1.6081226229577294e-16,
+        -1.608122622957729e-16,
+        0.0,
+        -1.6081226229577292e-16,
+        6.123232939436859e-17,
+        1.0,
+        0.0,
+        1.6081226229577292e-16,
+        1.0,
+        -6.123232939436859e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "89bdb5b7972d48feaa92128a8adb025a.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        1.2246467991473532e-16,
+        -0.0,
+        -0.0,
+        -1.2246467991473532e-16,
+        1.0,
+        1.2246467991473532e-16,
+        -0.0,
+        -1.4997597826618576e-32,
+        1.2246467991473532e-16,
+        -1.0,
+        -0.0,
+        -0.81412273645401,
+        3.114351987838745,
+        -1.6545131206512451,
+        1.0
+      ],
+      "name": "Polygon_Reduction_1"
+    },
+    {
+      "mesh": 0,
+      "name": "Polygon_Reduction_1_Polygon Reduction_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
