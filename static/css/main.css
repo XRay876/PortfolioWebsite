@@ -8,6 +8,20 @@
 @import 'contact.css';
 @import 'projects.css';
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #393939;
+}
+
 *,*::before,*::after {
     margin: 0;
     padding: 0;
@@ -181,8 +195,32 @@ body{
     z-index: 999;
 }
 
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    margin-bottom: 5px;
+    gap: 8px;
+}
+
+.footer-icons svg{
+    /* height: 30%; */
+    width: auto;
+    
+}
+
 .footer-data {
     font-size: 15px;
     font-weight: 200;
+    text-align: center;
     
+}
+
+.contact-links {
+    transition: transform .5s ease;
+}
+
+.contact-links:hover {
+    transform: translateY(-5px);
 }

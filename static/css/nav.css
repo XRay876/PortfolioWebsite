@@ -7,6 +7,10 @@
     letter-spacing: 1px
 }
 
+.navigation-bar-container {
+    height: 6rem;
+}
+
 .navigation-bar li {
     list-style: none;
 
@@ -31,7 +35,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid #1a1a1a;
     color: #fafafa;
     background-color: rgba(40,40,40,0.95);
@@ -45,6 +50,13 @@
         justify-content:center
     }
 }
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
 
 .navigation-item {
     transition: all 0.2s

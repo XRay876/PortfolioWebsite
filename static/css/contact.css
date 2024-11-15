@@ -1,6 +1,6 @@
 .contact {
     width: 1300px;
-    margin-top: 10vh;
+    margin-top: 20vh;
     min-height: 75vh;
     margin-left: auto;
     margin-right: auto;
@@ -136,13 +136,19 @@
 }
 
 .contact-form ul li {
-    background-color: white;
+    background-color: transparent;
+    list-style-type: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
 }
 
 
 
 li.error {
-    color: red;
+    color: rgb(222, 5, 5);
 }
 
 li.sent {

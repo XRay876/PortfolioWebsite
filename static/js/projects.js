@@ -1,8 +1,7 @@
-// document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     const projects = document.getElementById('projects');
     const projectsContainer = projects.querySelector('.projects-container');
-    const images = projectsContainer.querySelectorAll('.project-image');
+    let images = projectsContainer.querySelectorAll('.project-image');
     const baseSpeed = 5.5;
     const minSpeed = 0.9;
     let position = -projectsContainer.offsetWidth / 2;
@@ -14,7 +13,6 @@ window.addEventListener('load', () => {
     const totalPauseDuration = 2 * transitionDuration + stayDuration;
     const slowdownZone = 200;
     const activationThreshold = 100;
-    
 
     images.forEach(image => {
         image.dataset.imageWasActive = 'false';
@@ -26,12 +24,12 @@ window.addEventListener('load', () => {
     }
 
     function updateAnimationState() {
-        let viewportCenter = window.innerWidth / 2;
+        const viewportWidth = window.innerWidth;
+        const viewportCenter = viewportWidth / 2;
         let closestDistance = Infinity;
         let closestImage = null;
-        
 
-        for (let image of images) {
+        images.forEach(image => {
             const rect = image.getBoundingClientRect();
             const imageCenter = rect.left + rect.width / 2;
             const distance = Math.abs(imageCenter - viewportCenter);
@@ -40,47 +38,43 @@ window.addEventListener('load', () => {
                 closestDistance = distance;
                 closestImage = image;
             }
-        }
+        });
 
         if (!isPaused) {
             let speed;
             if (closestDistance < slowdownZone) {
-                let speedFactor = closestDistance / slowdownZone;
+                const speedFactor = closestDistance / slowdownZone;
                 speed = minSpeed + (baseSpeed - minSpeed) * speedFactor;
             } else {
                 speed = baseSpeed;
             }
-            
+
             position += speed;
+
+            for (let image of images) {
+                const rect = image.getBoundingClientRect();
+                const styles = window.getComputedStyle(image);
+                const marginLeft = parseFloat(styles.marginLeft) || 0;
+                const marginRight = parseFloat(styles.marginRight) || 0;
+                const leftEdgeIncludingMargin = rect.left - marginLeft;
+
+                if (leftEdgeIncludingMargin >= viewportWidth) {
+                    const imageTotalWidth = rect.width + marginLeft + marginRight;
+                    projectsContainer.insertBefore(image, projectsContainer.firstChild);
+                    position -= imageTotalWidth;
+                    images = projectsContainer.querySelectorAll('.project-image');
+                    break;
+                }
+            }
+
             if (position >= 0) {
                 position = -projectsContainer.offsetWidth / 2;
             }
+
             projectsContainer.style.transform = `translate3d(${position}px, 0, 0)`;
         }
 
-
-        // images.forEach(image => {
-        //     if (image === closestImage && closestDistance < activationThreshold && image.dataset.imageWasActive === 'false') {
-        //         image.classList.add('active-image');
-        //     } else {
-        //         setTimeout(image.classList.remove('active-image'), stayDuration);
-        //     }
-            
-        // });
-        // images.forEach(image => {
-        //     if (image === currentActiveImage) {
-                
-        //     } else if (image === closestImage && closestDistance < activationThreshold && image.dataset.imageWasActive === 'false') {
-        //         image.classList.add('active-image');
-        //     } else {
-        //         image.classList.remove('active-image');
-                
-        //     }
-        // });
-        
-
         if (closestDistance < 3) {
-            
             handleCenterImage(closestImage);
         }
     }
@@ -99,8 +93,6 @@ window.addEventListener('load', () => {
             isPaused = false;
             currentActiveImage = null;
             
-            
-
             setTimeout(() => {
                 image.dataset.imageWasActive = 'false';
             }, totalPauseDuration * 2);
@@ -132,6 +124,9 @@ window.addEventListener('load', () => {
 
     window.addEventListener('resize', () => {
         position = -projectsContainer.offsetWidth / 2;
+        images = projectsContainer.querySelectorAll('.project-image'); 
     });
 
 });
+
+//i`m dead;

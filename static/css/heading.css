@@ -7,10 +7,6 @@
     
     width: 100%;
     z-index: 999;   
-    /* background: linear-gradient(70deg, rgba(26,26,26,1) 50%, rgba(118,46,52,1) 74%, rgba(255,77,90,0.71) 100%); */
-    /* background: linear-gradient(70deg, rgba(26,26,26,1) 17%, rgba(31,27,27,1) 60%, rgba(89,16,22,1) 81%, rgba(177,26,17,1) 100%, rgba(255,77,90,1) 100%); */
-    /* background: linear-gradient(59deg, rgba(45,9,84,1) 0%, rgba(30,23,38,1) 4%, rgba(26,26,26,1) 10%, rgba(31,27,27,1) 60%, rgba(89,16,22,1) 81%, rgba(177,26,17,1) 100%, rgba(255,77,90,1) 100%); */
-    /* background: linear-gradient(59deg, rgb(66, 68, 7) 0%, rgb(38, 38, 23) 4%, rgba(26,26,26,1) 10%, rgba(31,27,27,1) 60%, rgba(89,16,22,1) 81%, rgba(177,26,17,1) 100%, rgba(255,77,90,1) 100%); */
     background: linear-gradient(59deg, rgb(73, 54, 11) 0%, rgb(48, 35, 11) 4%, rgba(26,26,26,1) 13%, rgba(31,27,27,1) 60%, rgba(89,16,22,1) 81%, rgba(177,26,17,1) 100%);
     opacity: 0;
 }
@@ -95,6 +91,7 @@
 
 .avatar img {
     border-radius: 20%;
+    pointer-events: none;
     max-width: 100%;
     height: auto;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);

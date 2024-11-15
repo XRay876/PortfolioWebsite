@@ -14,14 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
             return re.test(String(email).toLowerCase());
         }
 
-        // if (name.value.trim() === '') {
-        //     const li = document.createElement('li');
-        //     li.textContent = 'You have to have a name :/';
-        //     errorField.appendChild(li);
-        //     return;
-        // }
-
-
         if (!validateEmail(email.value)) {
             while (errorField.firstChild) {
                 errorField.removeChild(errorField.firstChild);
@@ -49,12 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 li.classList.add('sent');
                 errorField.appendChild(li);
                 form.reset();
+                setTimeout(() => {li.textContent = '';}, 3000);
             } else {
-                alert('Произошла ошибка при отправке формы.');
+                alert('Error occured while sending the message');
             }
         }).catch(function(error) {
-            console.error('Ошибка:', error);
-            alert('Произошла ошибка при отправке формы.');
+            console.error('Error:', error);
+            alert('Error occured while sending the message');
         });
     });
 
