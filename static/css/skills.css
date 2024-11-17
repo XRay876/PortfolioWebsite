@@ -233,3 +233,28 @@
     clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
     z-index: 1;
 }
+
+.additional-title-wrapper-outer {
+    position: relative;
+    padding: 3px; 
+    border-radius: 15px;
+    background-color: #ffe14d; 
+    clip-path: polygon(100% 0, 0 0, 0 60%, 50% 100%, 100% 60%);
+    display: inline-flex;
+}
+
+.additional-title-wrapper-inner {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 5rem;
+    border-radius: 15px;
+    background-color: #1a1a1a; 
+    clip-path: polygon(100% 0, 0 0, 0 60%, 50% 100%, 100% 60%);
+    z-index: 1;
+}
+
+.additional-title-wrapper-inner p {
+    padding-bottom: 15px;
+}

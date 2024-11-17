@@ -15,10 +15,12 @@
     <script src='static/js/projects.js'></script>
     <script src='static/js/form.js'></script>
     <script src='static/js/navigation.js'></script>
+    <script src='static/js/background.js'></script>
 
     
 </head>
 <body>
+
     <section class="heading-section" id="heading">
         <div class="hero" id="hero">
             <div class="greeting">
@@ -65,6 +67,11 @@
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
+        </div>
+    </div>
+    <div class="background">
+        <div class="canvas">
+            <canvas id="background"></canvas>
         </div>
     </div>
     
@@ -315,7 +322,13 @@
                             </td>
                         </tr>
                         <tr class="additional-info-title-wrapper">
-                            <td colspan="2" class="additional-info-title">Additional info</td>
+                            <td colspan="2" class="additional-info-title">
+                                <div class="additional-title-wrapper-outer">
+                                    <div class="additional-title-wrapper-inner">
+                                        <p>Additional info</p>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="td-not-active">
                             <!-- <td style="border-top: 2px solid #8b000087;">Machine Learning</td> -->
@@ -406,7 +419,7 @@
                 <h1>Contact</h1>
             </div>
             
-            <div class="contact-form">
+            <div class="contact-form" style="z-index: 999;">
                 <form id="contact-form" action="https://formspree.io/f/xgveyorj" method="POST">
                     
                     <input type="text" name="from_name" placeholder="Name" required>
