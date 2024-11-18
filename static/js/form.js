@@ -24,6 +24,13 @@ const form = () => {
             return;
         }
 
+        while (errorField.firstChild) {
+            errorField.removeChild(errorField.firstChild);
+        }
+        li.textContent = 'Sending...';
+        li.classList.add('sent');
+        errorField.appendChild(li);
+
         var data = new FormData(form);
     
         fetch(form.action, {
