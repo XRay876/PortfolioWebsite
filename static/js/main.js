@@ -6,12 +6,20 @@ import form from "./form.js";
 import projectsMovingLine from "./projects.js";
 import model from "./model.js";
 
+async function safeExecute(func) {
+    try {
+        await func();
+    } catch (error) {
+        console.error(`Error in ${func.name}:`, error);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    intersectingObjects(); 
-    textTypingEffect(); 
-    background();
-    navigation();
-    form();
-    projectsMovingLine();
-    model();
-})
+    safeExecute(intersectingObjects);
+    safeExecute(textTypingEffect);
+    safeExecute(background);
+    safeExecute(navigation);
+    safeExecute(form);
+    safeExecute(projectsMovingLine);
+    safeExecute(model);
+});
