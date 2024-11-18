@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-
+const model = () => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75,1,0.1,1000);
     const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
@@ -54,7 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     }, 1000);
 
-});
+};
+
+export default model;
 
 
 

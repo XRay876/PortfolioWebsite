@@ -1,7 +1,7 @@
 .contact {
     width: 1300px;
     margin-top: 20vh;
-    min-height: 75vh;
+    /* min-height: 50vh; */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10vh;
@@ -165,9 +165,32 @@ li.sent {
     .contact {
         width:auto;
     }
+
+    .contact-title h1 {
+        font-size: 6rem;
+        
+    }
+
+    .contact-title h1::before {
+        content: '';
+        position: relative;
+        border-bottom: 18px solid #ff4d5a;
+        width: 22rem;
+        display: block;
+        margin: 0 auto;
+        left: 2.8rem;
+        top: 6.8rem;
+        z-index: -1;
+    
+    }
 }
 
 @media (max-width: 800px) {
-    
+    .contact {
+        width: 100%;
+    }
+    .contact-form {
+        width: 80%;
+    }
 }
 

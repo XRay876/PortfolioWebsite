@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+const projectsMovingLine = () => {
     const projects = document.getElementById('projects');
     const projectsContainer = projects.querySelector('.projects-container');
     let images = projectsContainer.querySelectorAll('.project-image');
@@ -126,7 +126,8 @@ window.addEventListener('load', () => {
         position = -projectsContainer.offsetWidth / 2;
         images = projectsContainer.querySelectorAll('.project-image'); 
     });
+};
 
-});
+export default projectsMovingLine;
 
 //i`m dead;

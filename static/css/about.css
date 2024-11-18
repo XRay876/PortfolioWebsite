@@ -16,21 +16,35 @@
     .about {
         width:1100px
     }
+
+    .about-text-container {
+        width: 65% !important; 
+    }
 }
 
 @media (max-width: 1200px) {
     .about {
-        width:auto
+        width:auto;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .about-title {
         margin-left: 20%;
     }
+
+    .about-text-container {
+        width: 75% !important; 
+    }    
 }
 
 @media (max-width: 800px) {
     .about-title {
         margin-left: 10%;
+    }
+
+    .about-text-container {
+        width: 90% !important; 
     }
 }
 
@@ -61,12 +75,94 @@
 }
 
 .about-text {
-    margin-top: 5vh;
+    margin-top: 10vh;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .about-text-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid #ff4d5a;
+    border-radius: 15px;
+    height:fit-content;
+    float: left;
+    width: 40%;
+} */
+
+.about-text-container {
+    width: 60%; 
+    height: auto; 
+    padding: 10px;
+    border: 3px solid #ffe14d;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.about-early {
+    align-self: flex-start; 
+}
+
+.about-career {
+    align-self: flex-end; 
+}
+
+.about-future {
+    align-self: flex-start; 
+}
+
+.container-about-text-title.animate-left {
+    animation: moveInLeft 2s ease forwards;
+}
+
+.container-about-text-title.animate-right {
+    animation: moveInRight 2s ease forwards;
+}
+
+
+.container-about-text-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.title-about-text {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 7%;
+    align-items: center;
+    background-color: #ff4d5a;
+    font-weight: 800;
+    /* background-color: #ffe14d; */
+    font-size: 2rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    border-radius: 50px 50px 0 0;
 }
 
 .about-text p {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     font-size: 2rem;
     font-weight: 400;
     line-height: 3.5rem;
+}
+
+.about-text-container span {
+    text-decoration: underline;
+    text-decoration-color: #ff4d5a;
+    text-decoration-thickness: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }

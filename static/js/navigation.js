@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+const navigation = () => {
     const navigation_bar = document.getElementById('navigation-bar');
     const first_section = document.getElementById('hero');
     const bottomOfFirstSection = first_section.offsetHeight;
@@ -12,4 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation_bar.classList.remove('fixed');
         }
     });
-});
+};
+
+export default navigation;

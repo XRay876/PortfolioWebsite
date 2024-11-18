@@ -197,7 +197,8 @@
     top: -2px;
     bottom: -2px;
     left: -2px;
-    background-color: #ff4d59;
+    /* background-color: #ff4d59; */
+    background: linear-gradient(40deg, rgba(255, 255, 0, 0.99) 0%, rgba(255, 0, 0, 0.614) 15%, rgba(255, 0, 0, 0.601) 85%, rgba(255, 255, 0, 0.99));
     z-index: -1;
     border-radius: 10px 0px 0px 10px;
 }
@@ -210,7 +211,8 @@
     top: -2px;
     bottom: -2px;
     right: -2px;
-    background-color: #ff4d59;
+    /* background-color: #ff4d59; */
+    background: linear-gradient(40deg, rgba(255, 255, 0, 0.99) 0%, rgba(255, 0, 0, 0.614) 15%, rgba(255, 0, 0, 0.601) 85%, rgba(255, 255, 0, 0.99));
     border-radius: 0 10px 10px 0;
     z-index: -1;
 }

@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=> {
-
+const background = function () {
     const colors = [
         '#d5ab00c5',
         '#d5ab00c5',
@@ -110,4 +109,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
        
         dots = Array.from({ length: amount }, () => new Dot());
     });
-});
+};
+
+export default background;

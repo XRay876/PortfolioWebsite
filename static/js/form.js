@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+const form = () => {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
     
@@ -51,5 +51,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-});
+};
+ 
+export default form;

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=> {
+const slider = () => {
 
     const sliderContainer = document.querySelectorAll('.slider-images');
     sliderContainer.forEach((slider)=>{
@@ -39,4 +39,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         showSlide();
     });
-});
+};
+
+export default slider;
